@@ -1,4 +1,6 @@
-sealed class NumberExpressionSyntax : ExpressionSyntax {
+   namespace Minsk.CodeAnalysis {
+ 
+    public sealed class NumberExpressionSyntax : ExpressionSyntax {
 
     public NumberExpressionSyntax(SyntaxToken numberToken) {
 
@@ -15,3 +17,4 @@ sealed class NumberExpressionSyntax : ExpressionSyntax {
             yield return NumberToken;
         }
     }
+   }

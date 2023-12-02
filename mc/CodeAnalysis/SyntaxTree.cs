@@ -1,5 +1,7 @@
+
+namespace Minsk.CodeAnalysis {
 //This is just a wrapper to hold the expressionSyntax. ExpressionSyntax contains the tree and everything we need
-sealed class SyntaxTree {
+    public sealed class SyntaxTree {
 
     public SyntaxTree(IEnumerable<string> diagnostics,ExpressionSyntax root, SyntaxToken endOfFileToken) {
         Diagnostics = diagnostics.ToArray();
@@ -15,5 +17,7 @@ sealed class SyntaxTree {
         var parser = new Parser(text);
         return parser.Parse();
     }
+
+}
 
 }

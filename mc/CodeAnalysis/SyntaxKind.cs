@@ -1,4 +1,4 @@
- enum SyntaxKind {
+ public enum SyntaxKind {
         NumberToken,
         WhiteSpaceToken,
         PlusToken,
@@ -11,5 +11,6 @@
         EndOfFileToken,
         NumberExpression,
         BinaryExpression,
-        ParenthesizedExpressionSyntax
-    }
+        ParenthesizedExpressionSyntax,
+    UnaryExpression
+}

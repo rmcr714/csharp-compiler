@@ -1,4 +1,7 @@
-class Evaluator {
+
+namespace Minsk.CodeAnalysis {
+
+    public sealed class Evaluator {
         private readonly ExpressionSyntax _root;
 
         public Evaluator(ExpressionSyntax root) {
@@ -16,6 +19,19 @@ class Evaluator {
         {
             if(node is NumberExpressionSyntax n) {
                 return (int)n.NumberToken.Value;
+            }
+
+            if(node is UnaryExpressionSyntax u) {
+               var operand = EvaluateExpression(u.Operand);
+
+               if(u.OperatorToken.Kind == SyntaxKind.MinusToken) {
+                return  -operand;
+               } else if(u.OperatorToken.Kind == SyntaxKind.PlusToken) {
+                return  operand;
+               } else {
+
+                 throw new Exception($"Unexpected unary operatot : ${u.OperatorToken.Kind} ");
+               }
             }
 
             if(node is BinaryExpressionSyntax b) {
@@ -44,3 +60,5 @@ class Evaluator {
             throw new Exception($"Unexpected Node {node.Kind} ");
         }
     }
+
+}

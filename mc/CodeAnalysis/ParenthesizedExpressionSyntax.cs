@@ -1,4 +1,6 @@
-  sealed class ParenthesizedExpressionSyntax: ExpressionSyntax {
+  namespace Minsk.CodeAnalysis {
+
+  public sealed class ParenthesizedExpressionSyntax: ExpressionSyntax {
 
         public ParenthesizedExpressionSyntax(SyntaxToken openParenthesisToken,ExpressionSyntax expressionSyntax,
         SyntaxToken closedParenthesisToken) {
@@ -21,3 +23,5 @@
             yield return ClosedParenthesisToken;
         }
     }
+
+  }

@@ -1,4 +1,6 @@
-class SyntaxToken : SyntaxNode {
+
+namespace Minsk.CodeAnalysis {
+public sealed class SyntaxToken : SyntaxNode {
 
     public SyntaxToken(SyntaxKind kind, int position, string text, object value) {
         Kind = kind;
@@ -18,3 +20,4 @@ class SyntaxToken : SyntaxNode {
             return Enumerable.Empty<SyntaxNode>();
         }
     }
+}
