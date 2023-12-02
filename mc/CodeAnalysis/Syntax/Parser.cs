@@ -1,6 +1,6 @@
 using System.Diagnostics.Tracing;
 
-namespace Minsk.CodeAnalysis {
+namespace Minsk.CodeAnalysis.Syntax {
 
 internal sealed class Parser {
         private readonly SyntaxToken[] _tokens;

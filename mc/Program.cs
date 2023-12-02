@@ -2,6 +2,7 @@
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.Serialization;
 using Minsk.CodeAnalysis;
+using Minsk.CodeAnalysis.Syntax;
 
 namespace Minsk {
 

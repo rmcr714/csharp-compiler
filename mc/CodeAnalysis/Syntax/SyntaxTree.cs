@@ -1,5 +1,5 @@
 
-namespace Minsk.CodeAnalysis {
+namespace Minsk.CodeAnalysis.Syntax {
 //This is just a wrapper to hold the expressionSyntax. ExpressionSyntax contains the tree and everything we need
     public sealed class SyntaxTree {
 
